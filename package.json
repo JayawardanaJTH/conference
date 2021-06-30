@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "jest --watchAll --verbose ",
     "start": "parcel index.html"
   },
   "keywords": [],
@@ -14,10 +15,16 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "lodash": "^4.17.21",
-    "parcel": "^2.0.0-beta.2",
+    "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0"
+    "react-moment": "^1.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-toastify": "^7.0.4",
+    "react-toasts": "^3.0.6"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
   }
 }
