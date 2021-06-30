@@ -1,0 +1,7 @@
+.payment-body{
+    min-height: 100vh;
+    /* display: flex; */
+    background-image: url('../../../../public/images/rows-red-seats-theater.jpg');
+    background-repeat: no-repeat;
+    background-size: auto
+}
