@@ -1,0 +1,149 @@
+.sign-body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.753);
+}
+
+.body.active{
+    background-color: rgba(8, 37, 119, 0.788);
+}
+
+.main{
+    position: relative;
+    height: 700px;
+    width: 800px;
+    margin: 20px;
+}
+
+.box{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.342);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.404);
+}
+
+.box .in-box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.in-box h5{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.in-box button{
+    cursor: pointer;
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.075);
+}
+
+.forms{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.404);
+    transition: 0.5s ease-in-out;
+    overflow-y: scroll;
+}
+
+.forms.active{
+    left:50%;
+}
+
+.forms .form{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s ease-in;
+}
+
+.form .signin{
+    transition-delay: 0.25s;
+}
+.forms.active .signin{
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.forms .signup{
+    left: 100%;
+    transition-delay: 0s;
+}
+.forms.active .signup{
+    left: 0;
+    transition-delay: 0s;
+}
+
+.form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:400px) {
+    .main{
+        max-width: 400px;
+        height: 750px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main .box{
+        top:0;
+        height: 100%;
+    }
+
+    .forms{
+        width: 100%;
+        height: 600px;
+        top:0;
+        box-shadow: none;
+    }
+
+    .box .in-box{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+
+    .in-box.signin-button{
+        top: 0;
+    }
+
+    .forms.active{
+        left: 0;
+        top: 150px;
+    }
+}
