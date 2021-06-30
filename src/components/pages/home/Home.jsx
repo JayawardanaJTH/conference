@@ -1,20 +1,24 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import './Home.css'
+import NavBars from '../../common/NavBars'
+import HomeAbout from './HomeAbout';
+import HomeHeader from './HomeHeader';
+import HomeEvents from './HomeEvents'
+import HomeMenu from './HomeMenu';
+import HomeSpeakers from './HomeSpeakers';
 
 const Home = () => {
     return (  
-        <>
-        <h2>Home</h2>
-        <Link to="/signin-signup" >
-        <button>Sign Up | Sign In</button>
-        </Link>
-        <Link to="/payment" >
-        <button>Payment</button>
-        </Link>
-        <Link to="/documents" >
-        <button>documents</button>
-        </Link>
-        </>
+        <div className="home-body">
+            <NavBars />
+            <div className="home-container-fluid">
+                <HomeHeader />    
+                <HomeMenu />
+                <HomeAbout />
+                <HomeSpeakers />
+                <HomeEvents/>
+            </div>
+        </div>
     );
 }
  

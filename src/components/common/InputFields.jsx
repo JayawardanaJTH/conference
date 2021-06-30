@@ -1,22 +1,22 @@
 import React from 'react'
 
-export const InputFields = ({ name,label,type,placeholder,onChange }) => {
+export const InputFields = ({ name,label,type,placeholder,value,onChange }) => {
     return ( 
         <>
             <div className={name}>
                 <label >{label}</label>
-                <input type={type} className="form-control"  placeholder={placeholder} onChange={onChange}/>
+                <input type={type} className="form-control" value={value} placeholder={placeholder} onChange={onChange}/>
             </div>   
         </>
      );
 }
 
-export const Area = ({ name,label,type,placeholder,onChange }) => {
+export const Area = ({ name,label,type,placeholder,value,onChange }) => {
     return ( 
         <>
             <div className={name}>
                 <label >{label}</label>
-                <textarea type={type} className="form-control"  placeholder={placeholder} onChange={onChange}></textarea>
+                <textarea type={type} className="form-control" value={value} placeholder={placeholder} onChange={onChange}></textarea>
             </div>   
         </>
      );
